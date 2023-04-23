@@ -24,7 +24,7 @@ public class Quest : ScriptableObject
     [Header("Reward")] public Stat Reward = new Stat { Currency = 10, XP = 10 };
     
     public bool Completed { get; private set; }
-    //public QuestCompletedEvent QuestCompleted;
+   // public QuestCompletedEvent QuestCompleted;
 
     public abstract class QuestGoal : ScriptableObject
     {
@@ -33,7 +33,7 @@ public class Quest : ScriptableObject
         public int RequiredAmount = 1;
 
         public bool Completed { get; protected set; }
-        //{HideInInspector] public UnityEvent GoalCompleted;
+       // {HideInInspector] public UnityEvent GoalCompleted;
 
         public virtual string GetDescription()
         {
@@ -56,9 +56,9 @@ public class Quest : ScriptableObject
 
         private void Complete()
         {
-            Completed = true;
+          //  Completed = true;
            // GoalCompleted.Invoke();
-           // GoalCompleted.RemoveAllListeners();
+          //  GoalCompleted.RemoveAllListeners();
         }
 
         
@@ -69,6 +69,22 @@ public class Quest : ScriptableObject
     public void Initialize()
     {
         Completed = false;
+       // QuestCompleted = new QuestCompletedEvent();
+
+        foreach (var goal in Goals)
+        {
+            goal.Initialize();
+          // goal.GoalCompleted.AddListener(call: delegate { CheckGoals(); });
+        }
+    }
+
+    private void CheckGoals()
+    {
+        //Completed = Goals.All(g: QuestGoal => g.Completed);
+        if (Completed)
+        {
+           // QuestCompleted.Invoke()
+        }
     }
 
 }
