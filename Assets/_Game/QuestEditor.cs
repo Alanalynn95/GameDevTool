@@ -4,19 +4,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class QuestEditor : MonoBehaviour
 {
-    public QuestData quest;
+
+    public QuestDataS quest;
 
     public Text nameText;
     public Text descriptionText;
-    public Text goalText;
+    public Text rewardText;
 
     void Start()
     {
         nameText.text = quest._questName;
         descriptionText.text = quest._description;
-        goalText.text = quest._goal;
+        rewardText.text = quest._reward;
     }
 
 

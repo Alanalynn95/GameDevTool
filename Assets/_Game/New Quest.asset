@@ -9,11 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3187ccf3cb76e46af8fe1794f26e17, type: 3}
-  m_Name: QuestData_
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 0}
+  m_Name: New Quest
+  m_EditorClassIdentifier: Assembly-CSharp::QuestDataS
+  isActive: 1
   _questName: 
   _description: 
-  _goal: 
+  _reward: 
   _AcceptSound: {fileID: 0}
   _DeclineSound: {fileID: 0}
+  _goalType: 0
+  _requiredAmount: 0
+  _currentAmount: 0

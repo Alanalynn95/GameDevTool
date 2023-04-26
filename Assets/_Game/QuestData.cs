@@ -2,20 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
-public class QuestData : ScriptableObject
-{
-    [Header("Quest Info")]
-    public string _questName;
+    [CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
+    public class QuestDataS : ScriptableObject
+    {
+        public bool isActive;
 
-    public string _description;
+        [Header("Quest Info")]
+        public string _questName;
 
-    public string _goal;
+        public string _description;
 
-    [Header("Sound Effects")]
+        public string _reward;
 
-    public AudioSource _AcceptSound;
+        [Header("Sound Effects")]
 
-    public AudioSource _DeclineSound;
+        public AudioSource _AcceptSound;
+
+        public AudioSource _DeclineSound;
+
+    [Header("Quest Goal")]
+
+    public GoalType _goalType;
+
+    public int _requiredAmount;
+
+    public int _currentAmount;
+
+    public bool IsReached()
+    {
+    return (_currentAmount >= _requiredAmount);
+     }
+
+    public enum GoalType
+     {
+     Kill,
+     Gathering,
+    Crafting
+     }
+
 
 }
+
+
