@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: dde6100c3b2f5b84abb5c09264e53ad7, type: 3}
   m_Name: New Quest
-  m_EditorClassIdentifier: Assembly-CSharp::QuestDataS
+  m_EditorClassIdentifier: 
   isActive: 1
-  _questName: 
-  _description: 
-  _reward: 
+  _questName: Gathering Flowers
+  _description: Please go and gather four different types of flowers
+  _reward: 50 coins
   _AcceptSound: {fileID: 0}
   _DeclineSound: {fileID: 0}
-  _goalType: 0
-  _requiredAmount: 0
+  _goalType: 1
+  _requiredAmount: 4
   _currentAmount: 0

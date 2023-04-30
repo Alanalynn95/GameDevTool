@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class QuestEditor : MonoBehaviour
 {
 
-    public QuestDataS quest;
+    public QuestInfo NewQuest;
 
     public Text nameText;
     public Text descriptionText;
@@ -16,9 +16,9 @@ public class QuestEditor : MonoBehaviour
 
     void Start()
     {
-        nameText.text = quest._questName;
-        descriptionText.text = quest._description;
-        rewardText.text = quest._reward;
+        nameText.text = NewQuest._questName;
+        descriptionText.text = NewQuest._description;
+        rewardText.text = NewQuest._reward;
     }
 
 
